@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>blog.sunghlin.co</title>
+ <link href="sunghlin.github.io/blog/atom.xml" rel="self"/>
+ <link href="sunghlin.github.io/blog/"/>
+ <updated>2014-10-20T14:06:58-07:00</updated>
+ <id>sunghlin.github.io/blog</id>
+ <author>
+   <name>Sunghlin</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Jekyll Powered Blog on Github</title>
+   <link href="sunghlin.github.io/blog/2014/Jekyll-Powered-Blog-on-Github/"/>
+   <updated>2014-07-12T00:00:00-07:00</updated>
+   <id>sunghlin.github.io/blog/2014/Jekyll-Powered-Blog-on-Github</id>
+   <content type="html">&lt;p&gt;Before I wrote this article, I asked myself why I choose to host my blog on Github. However, I cannot find a satisfying reason to convince everyone. There are so many choices there. For instance, &lt;a href=&quot;http://www.wordpress.com&quot;&gt;Wordpress.com&lt;/a&gt; and &lt;a href=&quot;https://www.blogger.com/&quot;&gt;Blogger&lt;/a&gt; are two free good blogging platforms. If you prefer Markdown editing, &lt;a href=&quot;https://ghost.org/&quot;&gt;Ghost&lt;/a&gt; and &lt;a href=&quot;http://logdown.com/&quot;&gt;Logdown&lt;/a&gt; provide good solutions for editors. There is no sliver bullet by Jekyll powered Blog. So, who is the potential user of Jekyll powered Blog on Github?&lt;/p&gt;
+
+&lt;p&gt;First of all, you have some basic ideas of web programming and Markdown editing. Second, you only blog on some specific machines. Third and most importantly, &lt;em&gt;you want to control every code on your blog&lt;/em&gt;. If you meet all of those, you should go through this article and give the Jekyll powered blog a try.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The instructions in this article are summarized from &lt;a href=&quot;https://help.github.com/&quot;&gt;Github Help&lt;/a&gt;, &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, and &lt;a href=&quot;http://jekyllbootstrap.com/&quot;&gt;JekyllBootstrap&lt;/a&gt;. I assume that you have some ideas about Git.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;create-the-repository-environment&quot;&gt;Create the repository environment&lt;/h2&gt;
+
+&lt;p&gt;Github provides each user/business account a page on your user name (ex: your_username.github.io), and infinite project pages under your personal domain name (ex: your_username.github.io/project_name). Those two are only different in this part, and I will introduce the way of building their environments separately.&lt;/p&gt;
+
+&lt;h3 id=&quot;userbusiness-page&quot;&gt;User/business page&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a new repository, and name it as: &lt;code&gt;your_username.github.io&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;your_username here is your login name. You can also create &lt;code&gt;your_username.github.com&lt;/code&gt;, which is an alias of your_username.github.io.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone this repository from github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/your_username/your_username.github.io.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;project-page&quot;&gt;Project page&lt;/h3&gt;
+
+&lt;p&gt;For each project, Github read contents in gh-pages branch to generate the page, and this is the only difference.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a new repository if you don’t have a project yet. You can choose any name as you want, and assume it as &lt;code&gt;your_project&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Clone this repository from github&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/your_username/your_project.io.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create an orphan branch to hold all your files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git checkout --orphan gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remove all contents in this branch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git rm -rf *
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, you have an empty directory, which is used to store all you web contents. We will commit contents later.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Jekyll is an interpreter, which makes you review your website in your locate machines. Here, we follow the instructions from Github to install Jekyll.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install ruby, please take a look &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot;&gt;the instructions&lt;/a&gt;. (If you are using OS X, you can skip this step.)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install the package manager Bundler&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create configuration file&lt;/p&gt;
+
+    &lt;p&gt;Create a file called &lt;code&gt;Gemfile&lt;/code&gt;, and add followings into this file.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;source &#39;https://rubygems.org&#39;
+gem &#39;github-pages&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install Jekyll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ gem install github-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;run-jekyll&quot;&gt;Run Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Since we installed Jekyll from bundler, we can launch Jekyll from bundler. Use the command &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle exec jekyll serve 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in your root of the repository to compile the website. Then, you can check your website in the location &lt;code&gt;http://localhost:4000&lt;/code&gt;. Since we have not put anything into the folder, it should be empty now.&lt;/p&gt;
+
+&lt;h2 id=&quot;site-generator&quot;&gt;Site generator&lt;/h2&gt;
+
+&lt;p&gt;So far, we only have no contents in our blog. To quickly start a blog, we can use some generators to help us. I recommend two generators: &lt;a href=&quot;https://github.com/dbtek/jekyll-bootstrap-3&quot;&gt;jekyll-bootstrap-3&lt;/a&gt; and &lt;a href=&quot;http://getpoole.com/&quot;&gt;Poole&lt;/a&gt;. Please clone their files and put it into the root folder of your repository.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-config&quot;&gt;Jekyll config&lt;/h2&gt;
+
+&lt;p&gt;The configurations of Jekyll are set in file &lt;code&gt;_config.yml&lt;/code&gt;. Here, I introduce some basic configurations used in Jekyll&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Markdown engine&lt;/strong&gt;: the default from bundler is kramdown, which is recommended by Git. You can change to any other engine, as you want.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;markdown: kramdown
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Markdown extension&lt;/strong&gt;: choose what extensions will be treated as a markdown file. Here, we include markdown,mkd,mkdn, and md.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;markdown_ext: markdown,mkd,mkdn,md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Permalink&lt;/strong&gt;: the way you path of your post look like. Here, we make it as /2004/title-for-blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;permalink: /:year/:title/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Base Url path&lt;/strong&gt;: this is only required in project page. Even through the root of your project page is &lt;code&gt;your_username.github.io/your_project&lt;/code&gt;, the permalink we generated above still put your post in &lt;code&gt;your_username.github.io/2004/title-for-blog&lt;/code&gt;. Therefore, we should set this value to make your post in the correct path &lt;code&gt;your_username.github.io/your_project/2004/title-for-blog&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;baseurl: /your_project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;However, if you set baseurl, the local viewer cannot recognize this path because it think everything is in the root. Therefore, to review your blog locally, you should use command &lt;code&gt;bundle exec jekyll serve --baseurl &#39;&#39;&lt;/code&gt; to run Jekyll.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In order to make your url path correctly when linking resources (ex, images and css), link everything like this way: {{ site.baseurl }}/path/to/css.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Please check &lt;a href=&quot;http://jekyllrb.com/docs/home/&quot;&gt;Jekyll Documents&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submit-your-files&quot;&gt;Submit your files&lt;/h2&gt;
+
+&lt;p&gt;After we have done all constructions, we commit our files and upload to github.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add your files into repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git add .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Commit your modification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git commit -m &quot;First commit&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Push to github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;$ git push -u origin master (if this is your user page)
+$ git push origin gh-pages (if this is your project page)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, you can check your blog in the address &lt;code&gt;http://your_username.github.io&lt;/code&gt; or &lt;code&gt;http://your_username.github.io/your_project&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;Ya!!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Poor Man Profiler - knowing CPU usage</title>
+   <link href="sunghlin.github.io/blog/2014/Poor-Man-Profiler/"/>
+   <updated>2014-06-10T00:00:00-07:00</updated>
+   <id>sunghlin.github.io/blog/2014/Poor-Man-Profiler</id>
+   <content type="html">&lt;p&gt;We usually face a situation that we don’t know which parts in the program use more CPU time. Therefore, there are so many application profiler out there. For instance, &lt;a href=&quot;http://oprofile.sourceforge.net/news/&quot;&gt;Oprofile&lt;/a&gt; is a famous profiler, which could be used to monitor the application. &lt;a href=&quot;http://poormansprofiler.org/&quot;&gt;Poor Man Profiler&lt;/a&gt;, however, could further provide the benefit of tracking the complete stack and profiling all threads of to the same process.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Using Poor Man Profiler does not have to install other packages, as long as you have GDB in your computer (so it is for *nix-system only). The core of the profiler only relies on one line of code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gdb -ex &quot;set pagination 0&quot; -ex &quot;thread apply all bt&quot; -batch -p pid_of_your_program
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;demonstration&quot;&gt;Demonstration&lt;/h2&gt;
+
+&lt;p&gt;To demonstrate its powerness, I worte a perl program in the below. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-perl&quot;&gt;#!/usr/bin/env perl -w
+#############################################################
+# poor_man_profiler.pl                                      #
+#############################################################
+
+use strict;
+use warnings;
+
+my $proc_name = shift @ARGV;
+
+$SIG{INT}  = \&amp;amp;signal_handler;
+
+my $output_string = &quot;&quot;;
+my %output_agg;
+my %lib_agg;
+
+
+my $stop_flag = 0;
+
+my $result;
+my $item;
+
+print &quot;START profiling....press [Ctrl-C] to stop\n&quot;;
+
+my $pid = `pidof $proc_name`;
+
+while(!$stop_flag) {
+	$result = `gdb -ex &quot;set pagination 0&quot; -ex &quot;thread apply all bt&quot; -batch -p $pid`;
+	
+	for (split /^/, $result) {
+		if ($_ =~ /^Thread/) {
+			if ($output_string ne &quot;&quot;) {
+				if (not exists $output_agg{$output_string}) {
+					$output_agg{$output_string} = 1;
+				} else {
+					$output_agg{$output_string}++;
+				}
+
+				$output_string = &quot;&quot;;
+			}
+		}
+		
+		if ($_ =~ /^\#/) {
+			my @s_result = split(&#39; &#39;, $_);
+
+			if ($output_string ne &quot;&quot;) {
+				$output_string = $output_string.&quot;, &quot;;
+			}
+			
+			if ($s_result[2] eq &quot;in&quot;) {
+				$output_string = $output_string.$s_result[3];
+			} elsif ($s_result[3] eq &quot;at&quot;) {
+				$output_string = &quot;[at]&quot;.$output_string.$s_result[1];
+			}
+			
+			if ($s_result[@s_result-1] ne &quot;()&quot;) {
+				my $get_lib = (split /\//, (split /:/, $s_result[@s_result-1])[0])[-1];
+				
+				if (not exists $lib_agg{$get_lib}) {
+					$lib_agg{$get_lib} = 1;
+				} else {
+					$lib_agg{$get_lib}++;
+				}
+			
+			
+				$output_string = $output_string.&quot;(&quot;.$get_lib.&quot;)&quot;;
+			}
+		}
+	}
+	
+	if ($output_string ne &quot;&quot;) {
+		if (not exists $output_agg{$output_string}) {
+			$output_agg{$output_string} = 1;
+		} else {
+			$output_agg{$output_string}++;
+		}
+	}
+
+	sleep (1);
+}
+
+print &quot;profiling STOP!!!\n&quot;;
+
+print &quot;==\n&quot;;
+my $total_output_percentage = 0;
+foreach $item (keys %output_agg) {
+	$total_output_percentage += $output_agg{$item};
+}
+
+my $output_percentage;
+print &quot;   samples |  %  | stack path\n&quot;;
+foreach $item (sort {$output_agg{$b} &amp;lt;=&amp;gt; $output_agg{$a}} keys %output_agg) {
+	$output_percentage = $output_agg{$item}/$total_output_percentage*100;
+	printf &quot;%10d | %3d | %s\n&quot;, ($output_agg{$item}, $output_percentage, $item);
+}
+
+print &quot;==\n&quot;;
+my $total_lib_percentage = 0;
+foreach $item (keys %lib_agg) {
+	$total_lib_percentage += $lib_agg{$item};
+}
+
+my $lib_percentage;
+print &quot;   samples |  %  | model name\n&quot;;
+foreach $item (sort {$lib_agg{$b} &amp;lt;=&amp;gt; $lib_agg{$a}} keys %lib_agg) {
+	$lib_percentage = $lib_agg{$item}/$total_lib_percentage*100;
+	printf &quot;%10d | %3d | %s\n&quot;, ($lib_agg{$item}, $lib_percentage, $item);
+}
+
+exit;
+
+sub signal_handler {
+    $stop_flag = 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The usage of this command is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ perl poor_man_profiler.pl process_name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The example output is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo perl poor_man_profiler.pl top
+START profiling....press [Ctrl-C] to stop
+^Cprofiling STOP!!!
+==
+   samples |  %  | stack path
+        13 | 100 | __kernel_vsyscall, select(libc.so.6), ??, __libc_start_main(libc.so.6), ??
+==
+   samples |  %  | model name
+        14 | 100 | libc.so.6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I use &lt;code&gt;sudo&lt;/code&gt; to run my program because this program is not belong to me.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+
+</feed>

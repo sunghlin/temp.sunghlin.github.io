@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Poor Man Profiler - knowing CPU usage &middot; blog.sunghlin.co
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class=theme-base-0d>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about.html">About</a>
+        
+      
+    
+      
+    
+      
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+          <h3 class="masthead-title">
+            <a href="" title="Home">blog.sunghlin.co</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Poor Man Profiler - knowing CPU usage</h1>
+  <span class="post-date">10 Jun 2014</span>
+  <p>We usually face a situation that we don’t know which parts in the program use more CPU time. Therefore, there are so many application profiler out there. For instance, <a href="http://oprofile.sourceforge.net/news/">Oprofile</a> is a famous profiler, which could be used to monitor the application. <a href="http://poormansprofiler.org/">Poor Man Profiler</a>, however, could further provide the benefit of tracking the complete stack and profiling all threads of to the same process.</p>
+
+<!--more-->
+
+<p>Using Poor Man Profiler does not have to install other packages, as long as you have GDB in your computer (so it is for *nix-system only). The core of the profiler only relies on one line of code:</p>
+
+<pre><code>gdb -ex "set pagination 0" -ex "thread apply all bt" -batch -p pid_of_your_program
+</code></pre>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>To demonstrate its powerness, I worte a perl program in the below. </p>
+
+<pre><code class="language-perl">#!/usr/bin/env perl -w
+#############################################################
+# poor_man_profiler.pl                                      #
+#############################################################
+
+use strict;
+use warnings;
+
+my $proc_name = shift @ARGV;
+
+$SIG{INT}  = \&amp;signal_handler;
+
+my $output_string = "";
+my %output_agg;
+my %lib_agg;
+
+
+my $stop_flag = 0;
+
+my $result;
+my $item;
+
+print "START profiling....press [Ctrl-C] to stop\n";
+
+my $pid = `pidof $proc_name`;
+
+while(!$stop_flag) {
+	$result = `gdb -ex "set pagination 0" -ex "thread apply all bt" -batch -p $pid`;
+	
+	for (split /^/, $result) {
+		if ($_ =~ /^Thread/) {
+			if ($output_string ne "") {
+				if (not exists $output_agg{$output_string}) {
+					$output_agg{$output_string} = 1;
+				} else {
+					$output_agg{$output_string}++;
+				}
+
+				$output_string = "";
+			}
+		}
+		
+		if ($_ =~ /^\#/) {
+			my @s_result = split(' ', $_);
+
+			if ($output_string ne "") {
+				$output_string = $output_string.", ";
+			}
+			
+			if ($s_result[2] eq "in") {
+				$output_string = $output_string.$s_result[3];
+			} elsif ($s_result[3] eq "at") {
+				$output_string = "[at]".$output_string.$s_result[1];
+			}
+			
+			if ($s_result[@s_result-1] ne "()") {
+				my $get_lib = (split /\//, (split /:/, $s_result[@s_result-1])[0])[-1];
+				
+				if (not exists $lib_agg{$get_lib}) {
+					$lib_agg{$get_lib} = 1;
+				} else {
+					$lib_agg{$get_lib}++;
+				}
+			
+			
+				$output_string = $output_string."(".$get_lib.")";
+			}
+		}
+	}
+	
+	if ($output_string ne "") {
+		if (not exists $output_agg{$output_string}) {
+			$output_agg{$output_string} = 1;
+		} else {
+			$output_agg{$output_string}++;
+		}
+	}
+
+	sleep (1);
+}
+
+print "profiling STOP!!!\n";
+
+print "==\n";
+my $total_output_percentage = 0;
+foreach $item (keys %output_agg) {
+	$total_output_percentage += $output_agg{$item};
+}
+
+my $output_percentage;
+print "   samples |  %  | stack path\n";
+foreach $item (sort {$output_agg{$b} &lt;=&gt; $output_agg{$a}} keys %output_agg) {
+	$output_percentage = $output_agg{$item}/$total_output_percentage*100;
+	printf "%10d | %3d | %s\n", ($output_agg{$item}, $output_percentage, $item);
+}
+
+print "==\n";
+my $total_lib_percentage = 0;
+foreach $item (keys %lib_agg) {
+	$total_lib_percentage += $lib_agg{$item};
+}
+
+my $lib_percentage;
+print "   samples |  %  | model name\n";
+foreach $item (sort {$lib_agg{$b} &lt;=&gt; $lib_agg{$a}} keys %lib_agg) {
+	$lib_percentage = $lib_agg{$item}/$total_lib_percentage*100;
+	printf "%10d | %3d | %s\n", ($lib_agg{$item}, $lib_percentage, $item);
+}
+
+exit;
+
+sub signal_handler {
+    $stop_flag = 1;
+}
+</code></pre>
+
+<p>The usage of this command is:</p>
+
+<pre><code>$ perl poor_man_profiler.pl process_name
+</code></pre>
+
+<p>The example output is:</p>
+
+<pre><code>$ sudo perl poor_man_profiler.pl top
+START profiling....press [Ctrl-C] to stop
+^Cprofiling STOP!!!
+==
+   samples |  %  | stack path
+        13 | 100 | __kernel_vsyscall, select(libc.so.6), ??, __libc_start_main(libc.so.6), ??
+==
+   samples |  %  | model name
+        14 | 100 | libc.so.6
+</code></pre>
+
+<blockquote>
+  <p>I use <code>sudo</code> to run my program because this program is not belong to me.</p>
+</blockquote>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2014/Jekyll-Powered-Blog-on-Github/">
+            Jekyll Powered Blog on Github
+            <small>12 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

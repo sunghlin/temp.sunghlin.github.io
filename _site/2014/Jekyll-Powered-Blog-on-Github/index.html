@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Jekyll Powered Blog on Github &middot; blog.sunghlin.co
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class=theme-base-0d>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about.html">About</a>
+        
+      
+    
+      
+    
+      
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+          <h3 class="masthead-title">
+            <a href="" title="Home">blog.sunghlin.co</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Jekyll Powered Blog on Github</h1>
+  <span class="post-date">12 Jul 2014</span>
+  <p>Before I wrote this article, I asked myself why I choose to host my blog on Github. However, I cannot find a satisfying reason to convince everyone. There are so many choices there. For instance, <a href="http://www.wordpress.com">Wordpress.com</a> and <a href="https://www.blogger.com/">Blogger</a> are two free good blogging platforms. If you prefer Markdown editing, <a href="https://ghost.org/">Ghost</a> and <a href="http://logdown.com/">Logdown</a> provide good solutions for editors. There is no sliver bullet by Jekyll powered Blog. So, who is the potential user of Jekyll powered Blog on Github?</p>
+
+<p>First of all, you have some basic ideas of web programming and Markdown editing. Second, you only blog on some specific machines. Third and most importantly, <em>you want to control every code on your blog</em>. If you meet all of those, you should go through this article and give the Jekyll powered blog a try.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>The instructions in this article are summarized from <a href="https://help.github.com/">Github Help</a>, <a href="http://jekyllrb.com/">Jekyll</a>, and <a href="http://jekyllbootstrap.com/">JekyllBootstrap</a>. I assume that you have some ideas about Git.</p>
+</blockquote>
+
+<h2 id="create-the-repository-environment">Create the repository environment</h2>
+
+<p>Github provides each user/business account a page on your user name (ex: your_username.github.io), and infinite project pages under your personal domain name (ex: your_username.github.io/project_name). Those two are only different in this part, and I will introduce the way of building their environments separately.</p>
+
+<h3 id="userbusiness-page">User/business page</h3>
+
+<ul>
+  <li>Create a new repository, and name it as: <code>your_username.github.io</code>.</li>
+</ul>
+
+<blockquote>
+  <p>your_username here is your login name. You can also create <code>your_username.github.com</code>, which is an alias of your_username.github.io.</p>
+</blockquote>
+
+<ul>
+  <li>Clone this repository from github</li>
+</ul>
+<pre><code>git clone https://github.com/your_username/your_username.github.io.git
+</code></pre>
+
+<h3 id="project-page">Project page</h3>
+
+<p>For each project, Github read contents in gh-pages branch to generate the page, and this is the only difference.</p>
+
+<ul>
+  <li>
+    <p>Create a new repository if you don’t have a project yet. You can choose any name as you want, and assume it as <code>your_project</code>.</p>
+  </li>
+  <li>
+    <p>Clone this repository from github</p>
+  </li>
+</ul>
+<pre><code>$ git clone https://github.com/your_username/your_project.io.git
+</code></pre>
+
+<ul>
+  <li>Create an orphan branch to hold all your files</li>
+</ul>
+<pre><code>$ git checkout --orphan gh-pages
+</code></pre>
+
+<ul>
+  <li>Remove all contents in this branch</li>
+</ul>
+<pre><code>$ git rm -rf *
+</code></pre>
+
+<p>Now, you have an empty directory, which is used to store all you web contents. We will commit contents later.</p>
+
+<h2 id="install-jekyll">Install Jekyll</h2>
+
+<p>Jekyll is an interpreter, which makes you review your website in your locate machines. Here, we follow the instructions from Github to install Jekyll.</p>
+
+<ul>
+  <li>
+    <p>Install ruby, please take a look <a href="https://www.ruby-lang.org/en/downloads/">the instructions</a>. (If you are using OS X, you can skip this step.)</p>
+  </li>
+  <li>
+    <p>Install the package manager Bundler</p>
+  </li>
+</ul>
+<pre><code>$ gem install bundler
+</code></pre>
+
+<ul>
+  <li>
+    <p>Create configuration file</p>
+
+    <p>Create a file called <code>Gemfile</code>, and add followings into this file.</p>
+  </li>
+</ul>
+<pre><code>source 'https://rubygems.org'
+gem 'github-pages'
+</code></pre>
+
+<ul>
+  <li>Install Jekyll</li>
+</ul>
+<pre><code>$ gem install github-pages
+</code></pre>
+
+<h2 id="run-jekyll">Run Jekyll</h2>
+
+<p>Since we installed Jekyll from bundler, we can launch Jekyll from bundler. Use the command </p>
+
+<pre><code>$ bundle exec jekyll serve 
+</code></pre>
+
+<p>in your root of the repository to compile the website. Then, you can check your website in the location <code>http://localhost:4000</code>. Since we have not put anything into the folder, it should be empty now.</p>
+
+<h2 id="site-generator">Site generator</h2>
+
+<p>So far, we only have no contents in our blog. To quickly start a blog, we can use some generators to help us. I recommend two generators: <a href="https://github.com/dbtek/jekyll-bootstrap-3">jekyll-bootstrap-3</a> and <a href="http://getpoole.com/">Poole</a>. Please clone their files and put it into the root folder of your repository.</p>
+
+<h2 id="jekyll-config">Jekyll config</h2>
+
+<p>The configurations of Jekyll are set in file <code>_config.yml</code>. Here, I introduce some basic configurations used in Jekyll</p>
+
+<ul>
+  <li><strong>Markdown engine</strong>: the default from bundler is kramdown, which is recommended by Git. You can change to any other engine, as you want.</li>
+</ul>
+<pre><code>markdown: kramdown
+</code></pre>
+
+<ul>
+  <li><strong>Markdown extension</strong>: choose what extensions will be treated as a markdown file. Here, we include markdown,mkd,mkdn, and md.</li>
+</ul>
+<pre><code>markdown_ext: markdown,mkd,mkdn,md
+</code></pre>
+
+<ul>
+  <li><strong>Permalink</strong>: the way you path of your post look like. Here, we make it as /2004/title-for-blog.</li>
+</ul>
+<pre><code>permalink: /:year/:title/
+</code></pre>
+
+<ul>
+  <li><strong>Base Url path</strong>: this is only required in project page. Even through the root of your project page is <code>your_username.github.io/your_project</code>, the permalink we generated above still put your post in <code>your_username.github.io/2004/title-for-blog</code>. Therefore, we should set this value to make your post in the correct path <code>your_username.github.io/your_project/2004/title-for-blog</code>.</li>
+</ul>
+<pre><code>baseurl: /your_project
+</code></pre>
+
+<blockquote>
+  <p>However, if you set baseurl, the local viewer cannot recognize this path because it think everything is in the root. Therefore, to review your blog locally, you should use command <code>bundle exec jekyll serve --baseurl ''</code> to run Jekyll.</p>
+</blockquote>
+
+<blockquote>
+  <p>In order to make your url path correctly when linking resources (ex, images and css), link everything like this way: {{ site.baseurl }}/path/to/css.</p>
+</blockquote>
+
+<ul>
+  <li>Please check <a href="http://jekyllrb.com/docs/home/">Jekyll Documents</a> for more details.</li>
+</ul>
+
+<h2 id="submit-your-files">Submit your files</h2>
+
+<p>After we have done all constructions, we commit our files and upload to github.</p>
+
+<ul>
+  <li>Add your files into repository</li>
+</ul>
+<pre><code>$ git add .
+</code></pre>
+
+<ul>
+  <li>Commit your modification</li>
+</ul>
+<pre><code>$ git commit -m "First commit"
+</code></pre>
+
+<ul>
+  <li>Push to github</li>
+</ul>
+<pre><code>$ git push -u origin master (if this is your user page)
+$ git push origin gh-pages (if this is your project page)
+</code></pre>
+
+<p>Now, you can check your blog in the address <code>http://your_username.github.io</code> or <code>http://your_username.github.io/your_project</code>. </p>
+
+<p>Ya!!</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2014/Poor-Man-Profiler/">
+            Poor Man Profiler - knowing CPU usage
+            <small>10 Jun 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
