@@ -4,6 +4,7 @@ layout: default
 
 <div class="posts">
   {% for post in paginator.posts %}
+  {% if post.status == 'published' %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
@@ -16,6 +17,7 @@ layout: default
     {{ post.content | split:"<!--more-->" | first }}
     <p><a href='{{ site.baseurl }}{{ post.url }}'>Continue reading &rarr;</a></p>
   </div>
+  {% endif %}
   {% endfor %}
 </div>
 

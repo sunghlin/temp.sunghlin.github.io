@@ -2,7 +2,7 @@
 layout: post
 title:  Poor Man Profiler - knowing CPU usage
 keywords: profiler
-quote: 
+status: published
 ---
 
 We usually face a situation that we don't know which parts in the program use more CPU time. Therefore, there are so many application profiler out there. For instance, [Oprofile](http://oprofile.sourceforge.net/news/) is a famous profiler, which could be used to monitor the application. [Poor Man Profiler](http://poormansprofiler.org/), however, could further provide the benefit of tracking the complete stack and profiling all threads of to the same process.

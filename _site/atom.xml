@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>blog.sunghlin.co</title>
- <link href="sunghlin.github.io/blog/atom.xml" rel="self"/>
- <link href="sunghlin.github.io/blog/"/>
- <updated>2014-10-20T14:06:58-07:00</updated>
- <id>sunghlin.github.io/blog</id>
+ <title>sunghlin.github.io</title>
+ <link href="sunghlin.github.io/atom.xml" rel="self"/>
+ <link href="sunghlin.github.io/"/>
+ <updated>2014-10-22T21:39:57-07:00</updated>
+ <id>sunghlin.github.io</id>
  <author>
    <name>Sunghlin</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Jekyll Powered Blog on Github</title>
-   <link href="sunghlin.github.io/blog/2014/Jekyll-Powered-Blog-on-Github/"/>
+   <link href="sunghlin.github.io/2014/Jekyll-Powered-Blog-on-Github/"/>
    <updated>2014-07-12T00:00:00-07:00</updated>
-   <id>sunghlin.github.io/blog/2014/Jekyll-Powered-Blog-on-Github</id>
+   <id>sunghlin.github.io/2014/Jekyll-Powered-Blog-on-Github</id>
    <content type="html">&lt;p&gt;Before I wrote this article, I asked myself why I choose to host my blog on Github. However, I cannot find a satisfying reason to convince everyone. There are so many choices there. For instance, &lt;a href=&quot;http://www.wordpress.com&quot;&gt;Wordpress.com&lt;/a&gt; and &lt;a href=&quot;https://www.blogger.com/&quot;&gt;Blogger&lt;/a&gt; are two free good blogging platforms. If you prefer Markdown editing, &lt;a href=&quot;https://ghost.org/&quot;&gt;Ghost&lt;/a&gt; and &lt;a href=&quot;http://logdown.com/&quot;&gt;Logdown&lt;/a&gt; provide good solutions for editors. There is no sliver bullet by Jekyll powered Blog. So, who is the potential user of Jekyll powered Blog on Github?&lt;/p&gt;
 
 &lt;p&gt;First of all, you have some basic ideas of web programming and Markdown editing. Second, you only blog on some specific machines. Third and most importantly, &lt;em&gt;you want to control every code on your blog&lt;/em&gt;. If you meet all of those, you should go through this article and give the Jekyll powered blog a try.&lt;/p&gt;
@@ -192,9 +192,9 @@ $ git push origin gh-pages (if this is your project page)
  
  <entry>
    <title>Poor Man Profiler - knowing CPU usage</title>
-   <link href="sunghlin.github.io/blog/2014/Poor-Man-Profiler/"/>
+   <link href="sunghlin.github.io/2014/Poor-Man-Profiler/"/>
    <updated>2014-06-10T00:00:00-07:00</updated>
-   <id>sunghlin.github.io/blog/2014/Poor-Man-Profiler</id>
+   <id>sunghlin.github.io/2014/Poor-Man-Profiler</id>
    <content type="html">&lt;p&gt;We usually face a situation that we don’t know which parts in the program use more CPU time. Therefore, there are so many application profiler out there. For instance, &lt;a href=&quot;http://oprofile.sourceforge.net/news/&quot;&gt;Oprofile&lt;/a&gt; is a famous profiler, which could be used to monitor the application. &lt;a href=&quot;http://poormansprofiler.org/&quot;&gt;Poor Man Profiler&lt;/a&gt;, however, could further provide the benefit of tracking the complete stack and profiling all threads of to the same process.&lt;/p&gt;
 
 &lt;!--more--&gt;

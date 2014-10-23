@@ -18,9 +18,9 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 baseurl: ''
 
 # Setup
-title:            blog.sunghlin.co
+title:            sunghlin.github.io
 description:      ''
-url:              sunghlin.github.io/blog
+url:              sunghlin.github.io
 
 author:
   name:           'Sunghlin'
