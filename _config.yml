@@ -20,7 +20,7 @@ baseurl: ''
 # Setup
 title:            sunghlin.github.io
 description:      ''
-url:              sunghlin.github.io
+url:              http://sunghlin.github.io
 
 author:
   name:           'Sunghlin'
