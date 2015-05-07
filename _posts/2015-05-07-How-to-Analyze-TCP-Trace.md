@@ -17,4 +17,4 @@ Let's first take a look on the result from tcpdump. To use tcpdump, you simply t
 
 	$ sudo tcpdump
 
-![]({{ site.baseurl }}/public/figures/tcpdump/tcpdump_trace.png)
+![](figures/tcpdump/tcpdump_trace.png?raw=true)
