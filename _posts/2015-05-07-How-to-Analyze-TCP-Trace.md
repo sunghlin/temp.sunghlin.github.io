@@ -17,4 +17,4 @@ Let's first take a look on the result from tcpdump. To use tcpdump, you simply t
 
 	$ sudo tcpdump
 
-![](https://github.com/github/training-kit/blob/master/images/professortocat.png)
+![](https://github.com/sunghlin/sunghlin.github.io/blob/master/public/figures/tcpdump/tcpdump_trace.png)
