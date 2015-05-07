@@ -55,6 +55,7 @@ Well, interpreting the output from tcpdump is not my goal, so I just skip this s
 ### Example
 
 Now, we combine them together. If I want to capture the subnet 192.168.1.0/24 and write to a capture_file, the command will be
+	
 	$ sudo tcpdump net 192.168.1.0/24 -w capture_file
 	
 (For more details, please check the [map page](http://www.tcpdump.org/tcpdump_man.html) of tcpdump.)
