@@ -2,7 +2,7 @@
 layout: post
 title:  How to analyze TCP trace
 keywords: TCP, tcpdump, tcptrace
-quote: 
+status: published 
 ---
 
 I know so many posts have addressed this topic. However, in my perspective, none of them really give us a quick look of tools. So, the goal of this post is to give everyone an overlook of whole analysis procedures.
