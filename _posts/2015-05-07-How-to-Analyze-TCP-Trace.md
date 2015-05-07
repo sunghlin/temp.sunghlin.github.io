@@ -20,7 +20,7 @@ Let's first take a look on the result from tcpdump. To use tcpdump, you simply t
 This is output showing on the screen.
 ![]({{ site.baseurl }}/public/figures/tcpdump/tcpdump_trace.png)
 
-Well, interpreting the output from tcpdump is not my goal, so I just skip this step and talk about on options. There are some options I usually use:
+Well, interpreting the output from tcpdump is not my goal, so I just skip this step and talk about options. There are some options I usually use:
 
 - Don’t resolve hostnames, ports, etc
 ^
