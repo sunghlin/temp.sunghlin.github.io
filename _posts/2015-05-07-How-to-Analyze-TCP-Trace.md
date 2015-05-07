@@ -41,7 +41,23 @@ Well, interpreting the output from tcpdump is not my goal, so I just skip this s
 - Onle capture a subnet network, eg. 192.168.1.0/24
 ^
 	$ sudo tcpdump net 192.168.1.0/24
+	
+- Specify src, dst
+^
+	$ sudo tcpdump src 1.2.3.4
+	$ sudo tcpdump dst 5.6.7.8
 
+- Specify src, dst port
+^
+	$ sudo tcpdump src port 7439
+	$ sudo tcpdump dst port 18000
+	
+### Example
+
+Now, we combine them together. If I want to capture the subnet 192.168.1.0/24 and write to a capture_file, the command will be
+	$ sudo tcpdump net 192.168.1.0/24 -w capture_file
+	
+(For more details, please check the [map page](http://www.tcpdump.org/tcpdump_man.html) of tcpdump.)
 
 
 
