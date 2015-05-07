@@ -17,4 +17,34 @@ Let's first take a look on the result from tcpdump. To use tcpdump, you simply t
 
 	$ sudo tcpdump
 
-![](/figures/tcpdump/tcpdump_trace.png?raw=true)
+This is output showing on the screen.
+![]({{ site.baseurl }}/public/figures/tcpdump/tcpdump_trace.png)
+
+Well, interpreting the output from tcpdump is not my goal, so I just skip this step and talk about on options. There are some options I usually use:
+
+- Don’t resolve hostnames, ports, etc
+^
+	$ sudo tcpdump -n
+	
+- Print absolute sequence numbers
+^
+	$ sudo tcpdump -S
+	
+- Specify an interface, eg. eth0
+^
+	$ sudo tcpdump -i eth0
+	
+- Write to a file
+^
+	$ sudo tcpdump -w /path/to/file
+
+- Onle capture a subnet network, eg. 192.168.1.0/24
+^
+	$ sudo tcpdump net 192.168.1.0/24
+
+
+
+
+
+
+
