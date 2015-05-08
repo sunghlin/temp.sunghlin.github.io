@@ -7,6 +7,12 @@ status: published
 
 I know so many posts have addressed this topic. However, in my perspective, none of them really give us a quick look of tools. So, the goal of this post is to give everyone an overlook of whole analysis procedures.
 
+Coverage:
+
+- Tcpdump - grab packets
+- Tcptrace - analyze TCP packets
+- Xplot.org - illustrate packet behaviors
+
 <!--more-->
 
 ## TCPDUMP
@@ -59,6 +65,10 @@ Now, we combine them together. If I want to capture the subnet 192.168.1.0/24 an
 	$ sudo tcpdump net 192.168.1.0/24 -w capture_file
 	
 (For more details, please check the [map page](http://www.tcpdump.org/tcpdump_man.html) of tcpdump.)
+
+## TCPTRACE
+
+
 
 
 
