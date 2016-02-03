@@ -85,7 +85,8 @@ This is output showing on the screen.
 ^
 	$ tcptrace -l -o4 capture_file
 
-
+This is output showing on the screen.
+![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_link_4.png)
 
 
 

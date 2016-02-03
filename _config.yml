@@ -1,6 +1,6 @@
 markdown: kramdown
 markdown_ext: markdown,mkd,mkdn,md
-highlighter: pygments
+highlighter: rouge
 permalink: /:year/:title/
 safe: false
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
