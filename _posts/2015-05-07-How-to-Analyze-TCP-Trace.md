@@ -88,14 +88,25 @@ This is output showing on the screen.
 This is output showing on the screen.
 ![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_link_4.png)
 
-Tcptrace can also help us to convert those trace to visual figures. However, it can only generate the plot file. We have to use Xplot (will introduced later) to view it. There are five kinds of figures: Time Sequence Graph (-S), Throughput Graph (-T), RTT Graph (-R), Outstanding Data Graph (-N), and Segment Size Graph (-F).
+Tcptrace can also help us to convert those trace to visual figures. However, it can only generate the plot file. We have to use Xplot.org (will introduced later) to view it. There are five kinds of figures: Time Sequence Graph (-S), Throughput Graph (-T), RTT Graph (-R), Outstanding Data Graph (-N), and Segment Size Graph (-F).
 
 - Draw the Time Sequence Graph (replace -S with others to plot other figures)
 ^
 	$ tcptrace -S capture_file
 
-- To draw all figures
+- To draw all figures for link No.4
 ^
-	$ tcptrace -G capture_file
+	$ tcptrace -G -o4 capture_file
 
 (For more details, please check the [manual](http://www.tcptrace.org/tcptrace-manual/manual/node11_tf.html) of tcptrace.)
+
+## Xplot.org
+
+Xplot.org is an extended version for original Xplot, which was released in the late 1980s. Xplot.org supports color and more format. So, when you type the command, make sure you type xplot.org exactly. The output files from tcptrace drawing are XPL files. So, if I want to draw the figures about Time Sequence Graph for Link No.4 (, which is specified as g -> h in the above figure), I can type
+
+	$ xplot.org g2h_tsg.xpl
+
+This is output figure.
+![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_tsg.png)
+
+(To read the figure, please check the [manual](http://www.tcptrace.org/tcptrace-manual/manual/index.html) of tcptrace.)
