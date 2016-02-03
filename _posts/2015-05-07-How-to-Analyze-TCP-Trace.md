@@ -88,5 +88,14 @@ This is output showing on the screen.
 This is output showing on the screen.
 ![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_link_4.png)
 
+Tcptrace can also help us to convert those trace to visual figures. However, it can only generate the plot file. We have to use Xplot (will introduced later) to view it. There are five kinds of figures: Time Sequence Graph (-S), Throughput Graph (-T), RTT Graph (-R), Outstanding Data Graph (-N), and Segment Size Graph (-F).
 
+- Draw the Time Sequence Graph (replace -S with others to plot other figures)
+^
+	$ tcptrace -S capture_file
 
+- To draw all figures
+^
+	$ tcptrace -G capture_file
+
+(For more details, please check the [manual](http://www.tcptrace.org/tcptrace-manual/manual/node11_tf.html) of tcptrace.)
