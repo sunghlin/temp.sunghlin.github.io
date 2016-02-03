@@ -44,7 +44,7 @@ Well, interpreting the output from tcpdump is not my goal, so I just skip this s
 ^
 	$ sudo tcpdump -w /path/to/file
 
-- Only capture a sub network, eg. 192.168.1.0/24
+- Onle capture a subnet network, eg. 192.168.1.0/24
 ^
 	$ sudo tcpdump net 192.168.1.0/24
 	
@@ -68,22 +68,9 @@ Now, we combine them together. If I want to capture the subnet 192.168.1.0/24 an
 
 ## TCPTRACE
 
-After we have the log, we are ready to analyze the trace. Tcptrace allows us to summarize and visualize the data. There are some options I usually use:
+After we have the log, we are ready to analyze the trace. Tcptrace allows us to summerize and virtualize the data.
 
-- Observe the summary of all link pairs
-^
-	$ tcptrace capture_file
 
-This is output showing on the screen.
-![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_links.png)
-
-- Show the detail of all links shown above
-^
-	$ tcptrace -l capture_file
-	
-- Only show the detail of the link No.4 (use -o with the link number)
-^
-	$ tcptrace -l -o4 capture_file
 
 
 
