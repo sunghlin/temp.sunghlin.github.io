@@ -1,12 +1,15 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
-I'm Sung-Han Lin, a software developer, studing a PhD degree in the US.
+Some information about you!
 
-I'm parcticing my writing skills in this blog. If you think my sentenses are odd, please help me to make them better.
+### More Information
 
-## Contact me
+A place to include any other types of information that you'd like to include about yourself.
 
-Questions or suggestions? Drop me a line: sunghlin [AT] gmail [DOT] com
+### Contact me
+
+[email@domain.com](mailto:email@domain.com)

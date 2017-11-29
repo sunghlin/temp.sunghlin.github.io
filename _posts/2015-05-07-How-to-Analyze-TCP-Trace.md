@@ -21,17 +21,19 @@ Tcpdump is a famous package analyzer. Many people might be familiar with a highe
 
 Let's first take a look on the result from tcpdump. To use tcpdump, you simply type tcpdump in your command line.(You should have the root permission.)
 
-	$ sudo tcpdump
+```bash
+$ sudo tcpdump
+```
 
 This is output showing on the screen.
-![]({{ site.baseurl }}/public/figures/tcpdump/tcpdump_trace.png)
+![]({{ site.url }}/assets/tcpdump/tcpdump_trace.png)
 
 Well, interpreting the output from tcpdump is not my goal, so I just skip this step and talk about options. There are some options I usually use:
 
 - Don’t resolve hostnames, ports, etc
-^
+```
 	$ sudo tcpdump -n
-	
+```
 - Print absolute sequence numbers
 ^
 	$ sudo tcpdump -S
@@ -71,22 +73,22 @@ Now, we combine them together. If I want to capture the subnet 192.168.1.0/24 an
 After we have the log, we are ready to analyze the trace. Tcptrace allows us to summarize and visualize the data. There are some options I usually use:
 
 - Observe the summary of all link pairs
-^
+
 	$ tcptrace capture_file
 
 This is output showing on the screen.
-![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_links.png)
+![]({{ site.url }}/assets/tcpdump/tcptrace_links.png)
 
 - Show the detail of all links shown above
-^
+
 	$ tcptrace -l capture_file
 	
 - Only show the detail of the link No.4 (use -o with the link number)
-^
+
 	$ tcptrace -l -o4 capture_file
 
 This is output showing on the screen.
-![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_link_4.png)
+![]({{ site.url }}/assets/tcpdump/tcptrace_link_4.png)
 
 Tcptrace can also help us to convert those trace to visual figures. However, it can only generate the plot file. We have to use Xplot.org (will introduced later) to view it. There are five kinds of figures: Time Sequence Graph (-S), Throughput Graph (-T), RTT Graph (-R), Outstanding Data Graph (-N), and Segment Size Graph (-F).
 
@@ -107,6 +109,6 @@ Xplot.org is an extended version for original Xplot, which was released in the l
 	$ xplot.org g2h_tsg.xpl
 
 This is output figure.
-![]({{ site.baseurl }}/public/figures/tcpdump/tcptrace_tsg.png)
+![]({{ site.url }}/assets/tcpdump/tcptrace_tsg.png)
 
 (To read the figure, please check the [manual](http://www.tcptrace.org/tcptrace-manual/manual/index.html) of tcptrace.)
