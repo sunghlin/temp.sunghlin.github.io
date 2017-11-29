@@ -4,6 +4,6 @@ title: Publication
 permalink: /publication/
 ---
 
-==== Publication ====
-
-This is my publication page.
+- The Cloudlet Bazaar Dynamic Markets for the Small Cloud
+by Ranjan Pal, Sung-Han Lin, Leana Golubchik
+arXiv preprint arXiv:1704.00845, 2017
