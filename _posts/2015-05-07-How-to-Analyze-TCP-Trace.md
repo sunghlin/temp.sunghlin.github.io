@@ -73,18 +73,18 @@ Now, we combine them together. If I want to capture the subnet 192.168.1.0/24 an
 After we have the log, we are ready to analyze the trace. Tcptrace allows us to summarize and visualize the data. There are some options I usually use:
 
 - Observe the summary of all link pairs
-
+^
 	$ tcptrace capture_file
 
 This is output showing on the screen.
 ![]({{ site.url }}/assets/tcpdump/tcptrace_links.png)
 
 - Show the detail of all links shown above
-
+^
 	$ tcptrace -l capture_file
 	
 - Only show the detail of the link No.4 (use -o with the link number)
-
+^
 	$ tcptrace -l -o4 capture_file
 
 This is output showing on the screen.
