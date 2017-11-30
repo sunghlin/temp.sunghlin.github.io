@@ -292,20 +292,43 @@ footer {
 /*    PUBLICATION    */
 /*********************/
 
+ol li ul {
+  padding: 0;
+}
+
 ol li ul li {
   list-style-type: none;
   display: inline-block;
-  background-color: #009999;
-  border-color: teal;
-  border-radius: 3px;
-  color: white;
-  padding: 1px 5px;
-  vertical-align: middle;
-  margin: 5px 0 5px 0;
-  font-size: 12px;
-  line-height: 1.5;
+  padding-bottom:1em;
 }
 
 ol li ul li a{
   color: white;
+}
+
+ol li ul li span {
+  border-radius: 3px;
+  color: white;
+  padding: 5px 8px;
+  vertical-align: middle;
+  margin: 5px 0 5px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+ol li ul li span.pdf {
+  background-color: #009999;
+  border-color: teal;
+
+}
+
+ol li ul li span.bibtex {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+ol li ul li span.link {
+  background-color: #f0ad4e;
+  border-color: #eea236;
 }
