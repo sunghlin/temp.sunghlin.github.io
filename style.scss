@@ -300,6 +300,11 @@ ol li ul {
   padding: 0;
   float:right;
   margin-top:-2.7em;
+
+  @include mobile {
+    margin-top: 5px;
+    float: none;
+  }
 }
 
 ol li ul li {
