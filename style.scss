@@ -33,9 +33,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  //font-family: $helveticaNeue;
+  font-family: $roboto_slab;
   color: $darkerGray;
-  font-weight: bold;
+  font-weight: 700;
 
   line-height: 1.7;
   margin: 1em 0 10px;
@@ -105,7 +106,7 @@ em, i {
 }
 
 strong, b {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 img {
@@ -319,7 +320,7 @@ ol li ul li span {
   margin: 5px 0 5px 0;
   font-size: 12px;
   line-height: 1.5;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 ol li ul li span.pdf {
