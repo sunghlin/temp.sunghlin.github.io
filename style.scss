@@ -21,7 +21,7 @@ body {
 	background: $white;
   //font: 18px/1.4 $helvetica;
   //font: 18px/1.4 $roboto;
-  font: 18px/1.4 $roboto_slab;
+  font: 18px/1.4 $montserrat;
   color: $darkGray;
 }
 
@@ -34,7 +34,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   //font-family: $helveticaNeue;
-  font-family: $roboto_slab;
+  //font-family: $roboto_slab;
+  font-family: $montserrat;
   color: $darkerGray;
   font-weight: 700;
 
