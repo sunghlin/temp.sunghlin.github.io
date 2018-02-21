@@ -1,6 +1,7 @@
 #
 # This file contains configuration flags to customize your site
 #
+theme: jekyll-theme-minimal
 
 # Name of your site (displayed in the header)
 name: Sung-Han Lin
@@ -51,8 +52,6 @@ baseurl: ""
 #
 # !! You don't need to change any of the configuration flags below !!
 #
-
-theme: jekyll-theme-minimal
 
 permalink: /:title/
 
