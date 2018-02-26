@@ -4,10 +4,14 @@
 @import "{{ site.theme }}";
 
 .site-avatar {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
    
     img {
       border-radius: 10px;
     }
-  }
+}
+
+nav a {
+    display: block;
+}
