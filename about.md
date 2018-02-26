@@ -22,8 +22,8 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 
 #### Improve the performance of SQL-MR Execution Engine - Teradata Labs Intern
 I profiled the performance of SQL-MapReduce Execution Engine and re-designed the mechanism to reduce the data transmission and I/O time between user defined functions and databases. 
-(1) Aggregating the output: Instead of sending result row by row in the original design, I caches rows and send it once to reduce the I/O time. This improves the performance by at least 20%. 
-(2) Eager sending: Sending cached data immediately if it is available. This improves the performance by 10%. 
+1. Aggregating the output: Instead of sending result row by row in the original design, I caches rows and send it once to reduce the I/O time. This improves the performance by at least 20%. 
+2. Eager sending: Sending cached data immediately if it is available. This improves the performance by 10%. 
 
 #### MediaWall Framework - FXPAL Intern
 I designed and developed media wall framework which instantiates and controls virtual machines to enable diversified screen presentations that are not limited by pre-installed projectors. Since this system works in a network, I built a centralized system to manage network resources and handle interactions between remote machines and services to enhance the performance. Moreover, I developed APIs to provide programmatic access from web-enabled platforms. To provide access interface, I programmed Web-based Graphical User Interfaces to enable presenters to manage projected screens on walls
