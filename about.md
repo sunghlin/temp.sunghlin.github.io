@@ -9,7 +9,7 @@ I completed my PhD from [Quantitative Evaluation & Design Research Group](http:/
 I am interested in Computer Networking, especially Distributed Systems and P2P Networks, Performance Modelling and Analysis, Economics and Game Theory, and Cloud Computing.
 
 ## Work Experience
-- _Performance Analyst_, _NetApp_, Oct 2017 - Present
+- _Performance Analyst_, __NetApp__, Oct 2017 - Present
 - _Teaching Assistant_, __CSci 402 Operating Systems__, Fall 2012 - Summer 2017
 - _Intern_, __Teradata Labs__, June 2014 - Aug 2014
 - _Intern_, __Fuji Xerox Palo Alto (FXPAL) Laboratory__, May 2013 - August 2013
