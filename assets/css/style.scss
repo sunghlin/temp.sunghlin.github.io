@@ -13,7 +13,7 @@ body {
 }
 
 section {
-    width: 700px;
+    width: 720px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,8 +24,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-avatar img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 10px;
 }
 
@@ -33,3 +33,51 @@ nav a {
     display: block;
     margin-bottom: 10px;
 }
+
+/*********************/
+/*    PUBLICATION    */
+/*********************/
+ol li {
+    margin-bottom: 5px;
+  }
+  
+  ol li ul {
+    padding: 0;
+  }
+  
+  ol li ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-bottom:1em;
+  }
+  
+  ol li ul li a{
+    color: white;
+  }
+  
+  ol li ul li span {
+    border-radius: 3px;
+    color: white;
+    padding: 5px 8px;
+    vertical-align: middle;
+    margin: 5px 0 5px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  
+  ol li ul li span.pdf {
+    background-color: #009999;
+    border-color: teal;
+  
+  }
+  
+  ol li ul li span.bibtex {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+  }
+  
+  ol li ul li span.link {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+  }
