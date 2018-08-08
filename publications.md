@@ -6,6 +6,8 @@ permalink: /publications/
 
 ## Conference Paper##
 1. _Sung-Han Lin_, Marco Paolieri, Cheng-Fu Chou, Leana Golubchik, <br/>__A model-based approach to streamlining distributed training for asynchronous SGD__,<br/> IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS), 2018
+    - <span class="pdf"></span>
+    - <span class="bibtex"></span>
 1. _Sung-Han Lin_, Ranjan Pal, Marco Paolieri, Leana Golubchik, <br/>__Performance Driven Resource Sharing Markets for the Small Cloud__,<br/> IEEE International Conference on Distributed Computing Systems (ICDCS), 2017
     - <span class="link">[publisher link (DOI)](http://ieeexplore.ieee.org/document/7979971/)</span>
     - <span class="bibtex">[bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:BIjhLW7jytIJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAWh-1f6S9uaYhtXvO09-OE1u-y57O3xEq&scisf=4&ct=citation&cd=0&hl=en)</span>
