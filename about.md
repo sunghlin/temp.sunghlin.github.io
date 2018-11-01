@@ -18,6 +18,23 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 
 ## Project Experiment
 
+### Large-Scale Machine Learning
+
+#### Large-scale Deep Learning in Shared Clusters 
+*(Papaer is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__)*
+
+we address two important problems for the application of this strategy to large-scale clusters and multiple, heterogeneous jobs. 
+1. We propose and validate a queueing model to estimate the throughput of a training job as a function of the number of nodes assigned to the job; this model targets asynchronous Stochastic Gradient Descent (SGD), and requires only data from quick, two-node profiling. 
+2. Throughput estimations are then used to explore several classes of scheduling heuristics to reduce response time in a scenario where heterogeneous jobs are continuously submitted to a large-scale cluster. These scheduling algorithms dynamically select which jobs to run and how many nodes to assign to each job, based on different trade-offs between service time reduction and efficiency (e.g., speedup per additional node). Heuristics are evaluated through extensive simulations of realistic DNN workloads, also investigating the effects of early termination, a common scenario for DNN training jobs.
+
+### Cloud Computing
+
+#### Resource Sharing for the Small Cloud
+
+*(Papaer is published in IEEE ICDCS 2017, with title __Performance Driven Resource Sharing Markets for the Small Cloud__)*
+
+Approximated an exponential growth stochastic model via TransientAnalysis to estimate the number of virtual machines exchanged within the cloud federation; developed market-basedgame-theoretic model that converges to efficient virtual machine sharing decisions at market equilibrium
+
 ### Distributed System
 
 #### Improve the performance of SQL-MR Execution Engine - Teradata Labs Intern
