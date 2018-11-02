@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-I completed my PhD from [Quantitative Evaluation & Design Research Group](http://qed.usc.edu/) in Computer Science at University of Southern California in 2017. I received my B.S. degree in Computer Sience and Information Engineering at National Taiwan University in 2006, and M.S. degree from [Communication and Multimedia Laboratory](http://cmlab.csie.ntu.edu.tw/) in Computer Science and Information Engineering at National Taiwan University in 2008.
+I completed my PhD from [Quantitative Evaluation & Design (QED) Research Group](http://qed.usc.edu/) in Computer Science at University of Southern California in 2017. I received my B.S. degree in Computer Sience and Information Engineering at National Taiwan University in 2006, and M.S. degree from [Communication and Multimedia Laboratory](http://cmlab.csie.ntu.edu.tw/) in Computer Science and Information Engineering at National Taiwan University in 2008.
 
 I am interested in Computer Networking, especially Distributed Systems and P2P Networks, Performance Modelling and Analysis, Economics and Game Theory, and Cloud Computing.
 
@@ -13,7 +13,7 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 - _Teaching Assistant_, __CSci 402 Operating Systems__, Fall 2012 - Summer 2017
 - _Intern_, __Teradata Labs__, June 2014 - Aug 2014
 - _Intern_, __Fuji Xerox Palo Alto (FXPAL) Laboratory__, May 2013 - August 2013
-- _Research Assistant (Adviser: Prof. Cheng-Fu Chou)_, __Communications and Multimedia Laboratory, Department of Computer Science and Information Engineering, National Taiwan University__, October 2009 - July 2010
+- _Research Assistant (Adviser: Prof. Cheng-Fu Chou)_, __Communications and Multimedia Laboratory (CMLab), Department of Computer Science and Information Engineering, National Taiwan University__, October 2009 - July 2010
 - _Research Assistant (Adviser: Prof. Zhao-Ming Gao)_, __Department of Foreign Languages and Literatures, National Taiwan University__, September 2006 - September 2007
 
 ## Project Experiment
@@ -23,7 +23,7 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 #### Large-scale Deep Learning in Shared Clusters 
 *(Papaer is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__)*
 
-we address two important problems for the application of this strategy to large-scale clusters and multiple, heterogeneous jobs. 
+We address two important problems for the application of this strategy to large-scale clusters and multiple, heterogeneous jobs. 
 1. We propose and validate a queueing model to estimate the throughput of a training job as a function of the number of nodes assigned to the job; this model targets asynchronous Stochastic Gradient Descent (SGD), and requires only data from quick, two-node profiling. 
 2. Throughput estimations are then used to explore several classes of scheduling heuristics to reduce response time in a scenario where heterogeneous jobs are continuously submitted to a large-scale cluster. These scheduling algorithms dynamically select which jobs to run and how many nodes to assign to each job, based on different trade-offs between service time reduction and efficiency (e.g., speedup per additional node). Heuristics are evaluated through extensive simulations of realistic DNN workloads, also investigating the effects of early termination, a common scenario for DNN training jobs.
 
@@ -54,6 +54,12 @@ Built Cassandra clusters with small-scale OpenStack virtual machines suitable fo
 Developed and simulated probability models to correctly analyse the performance of channel assignment with rapid cell phone hand-offs. Explored the effect of adopting random walk or human walk to probability models for assigning channels.
 
 ### Peer-to-Peer
+
+#### Hybrid P2P Video Streaming
+
+*(Papaer is published in IEEE/ACM IWQoS 2015, with title __Sustaining Ad-Driven P2P Streaming Ecosystems A Market-Based Approach__, following up a journal in IEEE Transactions on Multimedia with a title __On Market-Driven Hybrid-P2P Video Streaming__)*
+
+Re-designed sharing mechanisms to eliminate the problem of video playback pausesby up to 80% while providing sufficiently high quality of videos to peers; developed market-based game-theoretic modelthat uses advertisements as an incentive to satisfy all the market stakeholders.
 
 #### Implemented a distributed large-scale Digital Signage system.
 Implemented a distributed large-scale Digital Signage system. Developed partial storage systems for video contents and advertisements by combining Content Distribution Network and Peer-to-Peer technologies
