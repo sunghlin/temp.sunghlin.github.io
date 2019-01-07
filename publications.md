@@ -4,7 +4,7 @@ title: Publications
 permalink: /publications/
 ---
 
-## Conference Paper##
+## Conference Paper ##
 1. _Sung-Han Lin_, Marco Paolieri, Cheng-Fu Chou, Leana Golubchik, <br/>__A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__,<br/> IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS), 2018
     - <span class="link">[publisher link (DOI)](https://ieeexplore.ieee.org/abstract/document/8526895)</span>
     - <span class="pdf">[pdf](http://www.mscs.mu.edu/~mascots/Papers/34.pdf)</span>
