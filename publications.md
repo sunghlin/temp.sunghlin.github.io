@@ -9,7 +9,16 @@ permalink: /publications/
     - <span class="link">[publisher link (DOI)](https://ieeexplore.ieee.org/abstract/document/8526895)</span>
     - <span class="pdf">[pdf](http://www.mscs.mu.edu/~mascots/Papers/34.pdf)</span>
     - <span class="bibtex"><a href="#paper5">bibtex</a></span>
-    <pre class="expando" id="paper5">https://scholar.googleusercontent.com/scholar.bib?q=info:SED9MdLI060J:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAXDKtD7ufZyKzt7ozzJGOEz-Lk-fSXEsX&scisf=4&ct=citation&cd=0&hl=en </pre> 
+    <pre class="expando" id="paper5">
+    @inproceedings{lin2018model,
+        title={A model-based approach to streamlining distributed training for asynchronous SGD},
+        author={Lin, Sung-Han and Paolieri, Marco and Chou, Cheng-Fu and Golubchik, Leana},
+        booktitle={2018 IEEE 26th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS)},
+        pages={306--318},
+        year={2018},
+        organization={IEEE}
+    }
+  </pre> 
       
 1. _Sung-Han Lin_, Ranjan Pal, Marco Paolieri, Leana Golubchik, <br/>__Performance Driven Resource Sharing Markets for the Small Cloud__,<br/> IEEE International Conference on Distributed Computing Systems (ICDCS), 2017
     - <span class="link">[publisher link (DOI)](http://ieeexplore.ieee.org/document/7979971/)</span>
