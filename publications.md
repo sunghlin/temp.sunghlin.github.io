@@ -21,7 +21,17 @@ permalink: /publications/
       
 1. _Sung-Han Lin_, Ranjan Pal, Marco Paolieri, Leana Golubchik, <br/>__Performance Driven Resource Sharing Markets for the Small Cloud__,<br/> IEEE International Conference on Distributed Computing Systems (ICDCS), 2017
     - <span class="link">[publisher link (DOI)](http://ieeexplore.ieee.org/document/7979971/)</span>
-    - <span class="bibtex">[bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:BIjhLW7jytIJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAWh-1f6S9uaYhtXvO09-OE1u-y57O3xEq&scisf=4&ct=citation&cd=0&hl=en)</span>
+    - <span class="bibtex"><a href="#paper4">bibtex</a></span>
+    <pre class="expando" id="paper4">
+    @inproceedings{lin2017performance,
+        title={Performance driven resource sharing markets for the small cloud},
+        author={Lin, Sung-Han and Pal, Ranjan and Paolieri, Marco and Golubchik, Leana},
+        booktitle={Distributed Computing Systems (ICDCS), 2017 IEEE 37th International Conference on},
+        pages={241--251},
+        year={2017},
+        organization={IEEE}
+    }</pre> 
+    
 1. _Sung-Han Lin_, Ranjan Pal, Bo-Chun Wang, Leana Golubchik, <br/>__Sustaining Ad-Driven P2P Streaming Ecosystems A Market-Based Approach__,<br/> IEEE/ACM International Symposium on Quality of Service (IWQoS), Jun., 2015
     - <span class="link">[publisher link (DOI)](http://ieeexplore.ieee.org/document/7404722/)</span>
     - <span class="bibtex">[bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:wukeBq3rO4oJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAWh-1xsB7rLiFFkKeqSPYOepTrKrRD3pv&scisf=4&ct=citation&cd=0&hl=en)</span>
