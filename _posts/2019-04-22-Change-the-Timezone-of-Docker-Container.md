@@ -16,9 +16,9 @@ RUN sudo echo "America/Los_Angeles" > /etc/timezone
 RUN sudo dpkg-reconfigure -f noninteractive tzdata
 ```
 
-However, this mechanism assumes tzdata assumes that your system does not have setup `/etc/localtime`, and will read the config from `/etc/timezone`. If you like me, who might want to source from pre-build container, this trick might not work well because `tzdata` will also check `/etc/localtime` first. In my situation, NGC container always has its localtime set to UTC, so I cannot change the timezone successfully.
+However, this mechanism assumes tzdata assumes that your system does not have setup `/etc/localtime`, and will read the config from `/etc/timezone`. If you like me, who might want to source from pre-build container, this trick might not work well because `tzdata` will check and use `/etc/localtime` first. In my situation, NGC container always has its `/etc/localtime` set to UTC, so I cannot change the timezone successfully.
 
-So, there are two solutions for this:
+There are two solutions for this issue:
 
 ### (Option 1) Delete `/etc/localtime` first
 
