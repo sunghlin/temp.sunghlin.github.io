@@ -5,7 +5,7 @@ keywords: Docker, timezone, container
 status: published
 ---
 
-1Nvidia GPU Cloud (NGC) container is easy to use. However, I always got annoyed by the timezone inside the container, which shows UTC time. So, I did some researchs in the internet, and realized many people experience the same issue. Thus, I summerize what I have learned from this exercise.
+Nvidia GPU Cloud (NGC) container is easy to use. However, I always got annoyed by the timezone inside the container, which shows UTC time. So, I did some researchs in the internet, and realized many people experience the same issue. Thus, I summerize what I have learned from this exercise.
 
 <!--more-->
 
@@ -35,7 +35,7 @@ RUN /bin/ln -fs /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 RUN sudo dpkg-reconfigure -f noninteractive tzdata
 ```
 
-If you set it correctly, you can see the following messages when you are building the container.
+If you set it correctly, you will see the following messages when you are building the container.
 
 ```
 Current default time zone: 'America/Los_Angeles'
