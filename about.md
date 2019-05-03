@@ -16,7 +16,7 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 - _Research Assistant (Adviser: Prof. Cheng-Fu Chou)_, __Communications and Multimedia Laboratory (CMLab), Department of Computer Science and Information Engineering, National Taiwan University__, October 2009 - July 2010
 - _Research Assistant (Adviser: Prof. Zhao-Ming Gao)_, __Department of Foreign Languages and Literatures, National Taiwan University__, September 2006 - September 2007
 
-## Project Experiment
+## Project Experience
 
 ### Large-Scale Machine Learning
 
