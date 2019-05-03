@@ -4,9 +4,9 @@ title: About Me
 permalink: /about/
 ---
 
-I completed my PhD from [Quantitative Evaluation & Design (QED) Research Group](http://qed.usc.edu/) in Computer Science at University of Southern California in 2017. I received my B.S. degree in Computer Sience and Information Engineering at National Taiwan University in 2006, and M.S. degree from [Communication and Multimedia Laboratory](http://cmlab.csie.ntu.edu.tw/) in Computer Science and Information Engineering at National Taiwan University in 2008.
+I completed my PhD from [Quantitative Evaluation & Design (QED) Research Group](http://qed.usc.edu/) in Computer Science at University of Southern California in 2017. I received my B.S. degree in Computer Sience and Information Engineering (CSIE) at National Taiwan University (NTU) in 2006, and M.S. degree from [Communication and Multimedia Laboratory (CMLab)](http://cmlab.csie.ntu.edu.tw/) in Computer Science and Information Engineering (CSIE) at National Taiwan University (NTU) in 2008.
 
-I am interested in Computer Networking, especially Distributed Systems and P2P Networks, Performance Modelling and Analysis, Economics and Game Theory, and Cloud Computing.
+I am interested in Computer Networking, especially Distributed Systems and P2P Networks, Performance Modelling and Analysis, Machine Learning, and Cloud Computing.
 
 ## Work Experience
 - _Performance Analyst_, __NetApp__, Oct 2017 - Present
