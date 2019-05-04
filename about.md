@@ -22,10 +22,10 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 
 #### Large-scale Deep Learning in Shared Clusters
 
-<span class="cite">Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__</span>
-
-- <span class="place-usc">USC Research</span>
+- <span class="place-usc">USC - Research</span>
 - <span class="place-netapp">NetApp</span>
+
+<span class="cite">Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__</span>
 
 We address two important problems for the application of this strategy to large-scale clusters and multiple, heterogeneous jobs. 
 1. We propose and validate a queueing model to estimate the throughput of a training job as a function of the number of nodes assigned to the job; this model targets asynchronous Stochastic Gradient Descent (SGD), and requires only data from quick, two-node profiling. 
@@ -35,13 +35,18 @@ We address two important problems for the application of this strategy to large-
 
 #### Resource Sharing for the Small Cloud
 
-*(Paper is published in IEEE ICDCS 2017, with title __Performance Driven Resource Sharing Markets for the Small Cloud__)*
+- <span class="place-usc">USC - Research</span>
+
+<span class="cite">**Paper is published in IEEE ICDCS 2017, with title __Performance Driven Resource Sharing Markets for the Small Cloud__**</span>
 
 Approximated an exponential growth stochastic model via TransientAnalysis to estimate the number of virtual machines exchanged within the cloud federation; developed market-basedgame-theoretic model that converges to efficient virtual machine sharing decisions at market equilibrium
 
 ### Distributed System
 
-#### Improve the performance of SQL-MR Execution Engine - Teradata Labs Intern
+#### Improve the performance of SQL-MR Execution Engine
+
+- <span class="place-teradata">Teradata - Intern</span>
+
 I profiled the performance of SQL-MapReduce Execution Engine and re-designed the mechanism to reduce the data transmission and I/O time between user defined functions and databases. 
 1. Aggregating the output: Instead of sending result row by row in the original design, I caches rows and send it once to reduce the I/O time. This improves the performance by at least 20%. 
 2. Eager sending: Sending cached data immediately if it is available. This improves the performance by 10%. 

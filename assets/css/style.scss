@@ -118,7 +118,7 @@ code {
 .cite {
   border-radius: 10px;
   display:block;
-  background-color: #ddd;
+  background-color: #eee;
   padding: 5px 8px;
 }
 
@@ -139,8 +139,6 @@ ul li span {
   font-weight: 700;
 }
 
-
-
 ul li span.place-usc {
   background-color:#990000;
   color:#FFCC00;
@@ -150,6 +148,13 @@ ul li span.place-netapp {
   background-color:#0067C5;
   color:#FFFFFF;
 }
+
+ul li span.place-teradata {
+  background-color:#FA8C2D;
+  color:#FFFFFF;
+}
+
+
 
 /*********************/
 /*    SVG ICON    */
