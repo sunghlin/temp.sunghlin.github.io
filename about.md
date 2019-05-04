@@ -20,9 +20,12 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 
 ### Large-Scale Machine Learning
 
-#### Large-scale Deep Learning in Shared Clusters <span class="place-usc">USC Research</span>
+#### Large-scale Deep Learning in Shared Clusters
 
 <span class="cite">Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__</span>
+
+- <span class="place-usc">USC Research</span>
+- <span class="place-netapp">NetApp</span>
 
 We address two important problems for the application of this strategy to large-scale clusters and multiple, heterogeneous jobs. 
 1. We propose and validate a queueing model to estimate the throughput of a training job as a function of the number of nodes assigned to the job; this model targets asynchronous Stochastic Gradient Descent (SGD), and requires only data from quick, two-node profiling. 
