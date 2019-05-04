@@ -44,19 +44,19 @@ I profiled the performance of SQL-MapReduce Execution Engine and re-designed the
 1. Aggregating the output: Instead of sending result row by row in the original design, I caches rows and send it once to reduce the I/O time. This improves the performance by at least 20%. 
 2. Eager sending: Sending cached data immediately if it is available. This improves the performance by 10%. 
 
-#### MediaWall Framework <span class="default-span place-fxpal"> FXPAL Intern</span>
+#### MediaWall Framework <span class="default-span place-fxpal"> FXPAL - Intern</span>
 I designed and developed media wall framework which instantiates and controls virtual machines to enable diversified screen presentations that are not limited by pre-installed projectors. Since this system works in a network, I built a centralized system to manage network resources and handle interactions between remote machines and services to enhance the performance. Moreover, I developed APIs to provide programmatic access from web-enabled platforms. To provide access interface, I programmed Web-based Graphical User Interfaces to enable presenters to manage projected screens on walls
 
 <!---
 #### Speed up loading large data sets to a Facebook-like system on Cassandra <span class="default-span place-usc">USC - Research</span>
 Built Cassandra clusters with small-scale OpenStack virtual machines suitable for Facebook-like social network. Designed mechanisms equally distributing the workload to all running virtual machines. Coded multi-thread systems to handle different kinds of inputs without leaving the system idle.
 --->
-### Networking
 
+<!---
 #### Performance Analysis for the Speed-Sensitive Channel Assignment
 Developed and simulated probability models to correctly analyse the performance of channel assignment with rapid cell phone hand-offs. Explored the effect of adopting random walk or human walk to probability models for assigning channels.
-
-### Peer-to-Peer
+--->
+### Networking / Peer-to-Peer (P2P)
 
 #### Hybrid P2P Video Streaming <span class="default-span place-usc">USC - Research</span>
 
