@@ -4,9 +4,9 @@ title: About Me
 permalink: /about/
 ---
 
-I completed my PhD from [Quantitative Evaluation & Design (QED) Research Group](http://qed.usc.edu/) in Computer Science at University of Southern California in 2017. I received my B.S. degree in Computer Sience and Information Engineering (CSIE) at National Taiwan University (NTU) in 2006, and M.S. degree from [Communication and Multimedia Laboratory (CMLab)](http://cmlab.csie.ntu.edu.tw/) in Computer Science and Information Engineering (CSIE) at National Taiwan University (NTU) in 2008.
+I completed my Ph.D. from [Quantitative Evaluation & Design (QED) Research Group](http://qed.usc.edu/) in Computer Science at University of Southern California (USC) in 2017. I received my B.S. degree in Computer Sience and Information Engineering (CSIE) at National Taiwan University (NTU) in 2006, and M.S. degree from [Communication and Multimedia Laboratory (CMLab)](http://cmlab.csie.ntu.edu.tw/) in Computer Science and Information Engineering (CSIE) at National Taiwan University (NTU) in 2008.
 
-I am interested in Computer Networking, especially Distributed Systems and P2P Networks, Performance Modelling and Analysis, Machine Learning, and Cloud Computing.
+I am interested in Computer Networking, especially Distributed Systems and P2P Networks, Performance Modeling and Analysis, Machine Learning, and Cloud Computing.
 
 ## Work Experience
 - _Performance Analyst_, __NetApp__, Oct 2017 - Present
@@ -21,7 +21,8 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 ### Large-Scale Machine Learning
 
 #### Large-scale Deep Learning in Shared Clusters 
-*(Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__)*
+
+<span class="cite">Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__</span>
 
 We address two important problems for the application of this strategy to large-scale clusters and multiple, heterogeneous jobs. 
 1. We propose and validate a queueing model to estimate the throughput of a training job as a function of the number of nodes assigned to the job; this model targets asynchronous Stochastic Gradient Descent (SGD), and requires only data from quick, two-node profiling. 

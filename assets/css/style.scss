@@ -65,7 +65,7 @@ code {
 /*********************/
 /*    PUBLICATION    */
 /*********************/
-ol li {
+  ol li {
     margin-bottom: 5px;
   }
   
@@ -111,7 +111,15 @@ ol li {
     border-color: #eea236;
   }
 
-  
+/*********************/
+/*    ABOUT    */
+/*********************/
+
+.cite {
+  display:block;
+  background-color: #666;
+}
+
 /*********************/
 /*    SVG ICON    */
 /*********************/
