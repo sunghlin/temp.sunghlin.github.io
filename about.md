@@ -23,7 +23,7 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 #### ONTAP AI <span class="default-span place-netapp">NetApp</span>
 
 Built on a verified architecture that combines NVIDIA DGX-1 supercomputers, NetApp AFF storage, and Cisco networking supercharges your AI/DL environments.
-- Scalable AI Infrastructure: Designing for Real-World Deep Learning Use Cases [Technical Report](https://www.netapp.com/us/media/nva-1121-design.pdf)
+- Scalable AI Infrastructure: Designing for Real-World Deep Learning Use Cases [[Technical Report]](https://www.netapp.com/us/media/nva-1121-design.pdf)
 
 #### Large-scale Deep Learning in Shared Clusters <span class="default-span place-usc">USC - Research</span> <span class="default-span place-netapp">NetApp</span>
 
