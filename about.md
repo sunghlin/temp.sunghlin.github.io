@@ -20,7 +20,7 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 
 ### Large-Scale Machine Learning
 
-#### Large-scale Deep Learning in Shared Clusters 
+#### Large-scale Deep Learning in Shared Clusters <span class="place-usc">USC Research</span>
 
 <span class="cite">Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__</span>
 
