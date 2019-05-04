@@ -116,7 +116,7 @@ code {
 /*********************/
 
 .cite {
-  border-radius: 10px;
+  border-radius: 3px;
   display:block;
   background-color: #eee;
   padding: 5px 8px;
@@ -128,7 +128,7 @@ ul li {
   padding-bottom:1em;
 }
 
-ul li span {
+span.default-span {
   border-radius: 3px;
   color: white;
   padding: 5px 8px;
@@ -137,21 +137,20 @@ ul li span {
   font-size: 12px;
   line-height: 1.5;
   font-weight: 700;
+  float:right;
 }
 
-ul li span.place-usc {
+span.place-usc {
   background-color:#990000;
   color:#FFCC00;
 }
 
-ul li span.place-netapp {
+span.place-netapp {
   background-color:#0067C5;
-  color:#FFFFFF;
 }
 
-ul li span.place-teradata {
+span.place-teradata {
   background-color:#FA8C2D;
-  color:#FFFFFF;
 }
 
 
