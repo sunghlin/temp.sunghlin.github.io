@@ -22,8 +22,9 @@ I am interested in Computer Networking, especially Distributed Systems and P2P N
 
 #### Large-scale Deep Learning in Shared Clusters
 
-- <span class="default-span place-usc">USC - Research</span>
-- <span class="default-span place-netapp">NetApp</span>
+<span class="default-span place-usc">USC - Research</span>
+
+<span class="default-span place-netapp">NetApp</span>
 
 <span class="cite">Paper is published in IEEE MASCOTS 2018, with title __A Model-based Approach to Streamlining Distributed Training for Asynchronous SGD__</span>
 
@@ -35,7 +36,7 @@ We address two important problems for the application of this strategy to large-
 
 #### Resource Sharing for the Small Cloud
 
-- <span class="default-span place-usc">USC - Research</span>
+<span class="default-span place-usc">USC - Research</span>
 
 <span class="cite">**Paper is published in IEEE ICDCS 2017, with title __Performance Driven Resource Sharing Markets for the Small Cloud__**</span>
 
@@ -45,7 +46,7 @@ Approximated an exponential growth stochastic model via TransientAnalysis to est
 
 #### Improve the performance of SQL-MR Execution Engine
 
-- <span class="default-span place-teradata">Teradata - Intern</span>
+<span class="default-span place-teradata">Teradata - Intern</span>
 
 I profiled the performance of SQL-MapReduce Execution Engine and re-designed the mechanism to reduce the data transmission and I/O time between user defined functions and databases. 
 1. Aggregating the output: Instead of sending result row by row in the original design, I caches rows and send it once to reduce the I/O time. This improves the performance by at least 20%. 
